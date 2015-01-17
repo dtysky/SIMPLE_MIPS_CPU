@@ -22,16 +22,16 @@
 
 
 module ALU32(
-	input[31:0] a,b,aluc;
-	output[31:0] r;
-	output z;
+	input[31:0] a,b,aluc,
+	output[31:0] r,
+	output z
     );
 
 	reg[31:0] r_r;
 	wire[31:0] r_shift,r_logic_andor,r_logic_xorlui,r_addsub;
 
 
-	SHITT32 SHITF0 (a[4:0],b,aluc[2],aluc[3],r_shift);
+	SHIFT32 SHITF0 (a[4:0],b,aluc[2],aluc[3],r_shift);
 	LOGIC32 LOGIC0 (a,b,aluc[2],r_logic_andor,r_logic_xorlui);
 	ADDSUB32 ADDSUB0 (a,b,aluc[2],r_addsub);
 

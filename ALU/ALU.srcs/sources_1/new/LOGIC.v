@@ -22,8 +22,8 @@
 
 
 module LOGIC32(
-	input[31:0] a,b;
-	input cmd;
+	input[31:0] a,b,
+	input cmd,
 	output[31:0] r_a,r_b
     );
 
