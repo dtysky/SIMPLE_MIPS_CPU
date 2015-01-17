@@ -23,7 +23,7 @@
 
 module SHIFT32(
 	input[4:0] sa,
-	input[31:0] d,
+	input signed [31:0] d,
 	input right,arith,
 	output[31:0] sh
 	);
