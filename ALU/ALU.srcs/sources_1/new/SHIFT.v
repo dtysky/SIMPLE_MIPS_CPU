@@ -22,13 +22,13 @@
 
 
 module SHIFT32(
-	input [4:0] sa;
-	input [31:0] d;
+	input[4:0] sa;
+	input[31:0] d;
 	input right,arith;
-	output [31:0] sh
+	output[31:0] sh
 	);
 
-	reg [31:0] r_sh;
+	reg[31:0] r_sh;
 
 	always @(*) begin
 		case ({right,arith})
