@@ -1,13 +1,13 @@
 //Author : dtysky
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Xilinx
+// Engineer: dtysky 
 // 
 // Create Date: 2015/01/17 13:37:41
-// Design Name: 
+// Design Name: ALU
 // Module Name: ALU_TB
-// Project Name: 
+// Project Name: MISP_CPU
 // Target Devices: 
 // Tool Versions: 
 // Description: 
