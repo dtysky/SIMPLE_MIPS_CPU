@@ -63,7 +63,7 @@ module CONTROL_UNIT(
 					cmd_srl : cmd_out <= 14'b10001000111000;
 					cmd_sra : cmd_out <= 14'b10001001111000;
 					cmd_jr : cmd_out <= 14'b00000000000010;
-					default : /* default */;
+					default : cmd_out <= 14'b00000000000000;
 				endcase
 			end
 			cmd_addi : cmd_out <= 14'b11000110000000;
@@ -77,7 +77,7 @@ module CONTROL_UNIT(
 			cmd_lui : cmd_out <= 14'b11000100110000;
 			cmd_j : cmd_out <= 14'b00000000000011;
 			cmd_jal : cmd_out <= 14'b10100000000011;
-			default : /* default */;
+			default : cmd_out <= 14'b00000000000000;
 		endcase
 	end
 
