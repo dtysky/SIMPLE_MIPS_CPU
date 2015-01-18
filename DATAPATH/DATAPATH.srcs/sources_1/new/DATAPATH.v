@@ -22,10 +22,11 @@
 
 module DATAPATH(
 	input clk,
-	input[31:0] alu_r,alu_z,
+	input alu_z,
+	input[31:0] alu_r,
 	output[31:0] alu_a,alu_b,
-	output[3:0] alu_aluc,
-	input reg_we,
+	output[31:0] alu_aluc,
+	output reg_we,
 	input[31:0] reg_qa,reg_qb,
 	output[4:0] reg_wn,reg_rna,reg_rnb,
 	output[31:0] reg_d,
@@ -73,7 +74,7 @@ module DATAPATH(
 
 	assign alu_a = con_shfit ? {27'b0,sa} : reg_qa;
 	assign alu_b = con_aluimm ? imm_ext : reg_qb;
-	assign alu_aluc = con_aluc;
+	assign alu_aluc = {28'b0,con_aluc};
 
 	assign data_we = con_wmem;
 	assign data_di = reg_qb;
