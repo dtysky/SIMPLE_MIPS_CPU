@@ -28,25 +28,21 @@ module REGFILE(
 	output[31:0] qa,qb
     );
 
-	function[31:0] DEC5E(input[4:0] n,input ena);
-		case(ena)
-			1'b0 : DEC5E=32'b0;
-			1'b1 : DEC5E[n]=1'b0;
-		endcase
-	endfunction
-
 	reg[31:0] reg32[31:0];
 	reg[31:0] r_qa,r_qb;
-	wire[31:0] e;
-	assign e = DEC5E(wn,we);
 
     integer i;
+    initial begin
+		for (i=1;i<=31;i=i+1)
+		reg32[i] <= 32'b0;
+	end
+	
 	always @(posedge clk or negedge clrn) begin
 		if(~clrn) begin
-			for (i=1;i<31;i=i+1)
+			for (i=1;i<=31;i=i+1)
 				reg32[i] <= 32'b0;
-		end else if (e) begin
-			reg32[e] <= d;
+		end else if (we && wn) begin
+			reg32[wn] <= d;
 		end
 	end
 
