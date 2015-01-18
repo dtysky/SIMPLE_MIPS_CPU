@@ -2,7 +2,8 @@
 A simple MIPS CPU, 32bits, designed with verilogHDL.  
 
 **ALU----100%.**  
-**REGFILE----100%.**
+**REGFILE----100%.**  
+**CONTROL_UNIT----80%.**
 
 Files:  
 -----
@@ -15,4 +16,8 @@ Files:
 
 **REGFILE（REGFILE\REGFILE.srcs）:**  
 1. REGFILE.v: REGFILE  
-5. REGFILE_TB.sv: TestBench for REGFILE.
+2. REGFILE_TB.sv: TestBench for REGFILE.
+
+**CONTROL_UNIT（CONTROL_UNIT\CONTROL_UNIT.srcs）:**  
+1. CONTROL_UNIT.v: CONTROL_UNIT  
+2. CONTROL_UNIT.sv: TestBench for CONTROL_UNIT.
