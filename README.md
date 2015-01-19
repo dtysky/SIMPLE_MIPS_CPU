@@ -1,7 +1,7 @@
 # SIMPLE_MIPS_CPU
 A simple MIPS CPU, 32bits, designed with verilogHDL.  
 
-**TOTAL----80%.**   
+**TOTAL----95%.**   
 
 **ALU----100%.**  
 **REGFILE----100%.**  
@@ -33,3 +33,6 @@ Connect all sub IPCore.
 
 **INST_MEM（INST_MEM\INST_MEM.srcs）:**  
 1. INST_MEM.v: A list which has some inst, for test.    
+
+**DATA_MEM（DATA_MEM\DATA_MEM.srcs）:**  
+1. DATA_MEM.v: A ram, for test.    
