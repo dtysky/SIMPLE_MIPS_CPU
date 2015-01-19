@@ -1,13 +1,18 @@
 # SIMPLE_MIPS_CPU
 A simple MIPS CPU, 32bits, designed with verilogHDL.  
 
+**TOTAL----80%.**   
+
 **ALU----100%.**  
 **REGFILE----100%.**  
 **CONTROL_UNIT----100%.**  
-**DATAPATH----80%.**
+**DATAPATH----90%.**
 
 Files:  
 -----
+**MIPS_CPU（MIPS_CPU.srcs）:**  
+Connect all sub IPCore.  
+
 **ALU（ALU\ALU.srcs）:**  
 1. ALU.v: ALU  
 2. LOGIC.v: AND/OR/XOR/LUI    
@@ -25,3 +30,6 @@ Files:
 
 **DATAPATH（DATAPATH\DATAPATH.srcs）:**  
 1. DATAPATH.v: DATAPATH  
+
+**INST_MEM（INST_MEM\INST_MEM.srcs）:**  
+1. INST_MEM.v: A list which has some inst, for test.    
