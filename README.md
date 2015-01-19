@@ -6,7 +6,7 @@ A simple MIPS CPU, 32bits, designed with verilogHDL.
 **ALU----100%.**  
 **REGFILE----100%.**  
 **CONTROL_UNIT----100%.**  
-**DATAPATH----90%.**
+**DATAPATH----100%.**
 
 Files:  
 -----
