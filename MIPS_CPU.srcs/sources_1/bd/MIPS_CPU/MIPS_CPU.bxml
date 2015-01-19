@@ -84,6 +84,29 @@
 				<UsedIn Val="IMPLEMENTATION"/>
 				<UsedIn Val="SIMULATION"/>
 			</File>
+			<File Name="ip\MIPS_CPU_INST_MEM_0_0\MIPS_CPU_INST_MEM_0_0.xci"
+					Type="IP">
+				<Properties IsEditable="false"
+						IsVisible="false"
+						Timestamp="0"
+						IsTrackable="true"/>
+				<Library Name="xil_defaultlib"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
+			<File Name="ip\MIPS_CPU_INST_MEM_0_1\MIPS_CPU_INST_MEM_0_1.xci"
+					Type="IP">
+				<Instance HierarchyPath="INST_MEM_0"/>
+				<Properties IsEditable="false"
+						IsVisible="true"
+						Timestamp="0"
+						IsTrackable="true"/>
+				<Library Name="xil_defaultlib"/>
+				<UsedIn Val="SYNTHESIS"/>
+				<UsedIn Val="IMPLEMENTATION"/>
+				<UsedIn Val="SIMULATION"/>
+			</File>
 		</FileCollection>
 	</CompositeFile>
 </Root>

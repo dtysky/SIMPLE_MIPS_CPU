@@ -21,8 +21,8 @@
 
 
 module INST_MEM(
-	input[31:0] a,inst
-    );
+	input[31:0] a,
+	output[31:0] inst    );
 
 	wire[31:0] rom[0:31];
 
