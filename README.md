@@ -1,7 +1,7 @@
 # SIMPLE_MIPS_CPU
 A simple MIPS CPU, 32bits, designed with verilogHDL.  
 
-**CPU for simulation----100%.**   
+**CPU for simulation----90%.**   
 **CPU for buttons and leds----0%.**  
 
 **ALU----100%.**  

@@ -105,13 +105,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>DATAPATH_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="DATAPATH" spirit:vendor="dtysky" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_DATAPATH_0_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>INST_MEM_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="INST_MEM" spirit:vendor="dtysky" spirit:version="1.1"/>
         <spirit:configurableElementValues>
@@ -130,6 +123,16 @@
         <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_clk_wiz_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">20.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">120.000</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>DATAPATH_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="DATAPATH" spirit:vendor="dtysky" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_DATAPATH_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -140,17 +143,10 @@
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>clk_wiz_0_clk_out1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
-        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="DATA_MEM_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>restet_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="restet"/>
-        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="clrn"/>
         <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clrn"/>
+        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="clrn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>CONTROL_UNIT_0_wreg</spirit:name>
@@ -240,8 +236,8 @@
       <spirit:adHocConnection>
         <spirit:name>ALU32_0_r</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ALU32_0" spirit:portRef="r"/>
-        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="alu_r"/>
         <spirit:externalPortReference spirit:portRef="alu_pinout"/>
+        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="alu_r"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>REGFILE_0_qa</spirit:name>
@@ -281,8 +277,8 @@
       <spirit:adHocConnection>
         <spirit:name>INST_MEM_0_inst_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="INST_MEM_0" spirit:portRef="inst_out"/>
-        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="inst_do"/>
         <spirit:externalPortReference spirit:portRef="inst_pinout"/>
+        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="inst_do"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>DATAPATH_0_inst_a</spirit:name>
@@ -307,13 +303,24 @@
       <spirit:adHocConnection>
         <spirit:name>DATA_MEM_0_data_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="DATA_MEM_0" spirit:portRef="data_out"/>
-        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="data_do"/>
         <spirit:externalPortReference spirit:portRef="data_pinout"/>
+        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="data_do"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>DATAPATH_0_pc_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="pc_out"/>
         <spirit:externalPortReference spirit:portRef="pc_pinout"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_wiz_0_clk_out1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
+        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_wiz_0_clk_out2</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out2"/>
+        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="DATA_MEM_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

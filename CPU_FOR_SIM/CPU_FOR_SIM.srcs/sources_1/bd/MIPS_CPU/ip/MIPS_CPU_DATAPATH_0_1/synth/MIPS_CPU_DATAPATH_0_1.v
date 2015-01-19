@@ -48,7 +48,7 @@
 
 
 // IP VLNV: dtysky:user:DATAPATH:1.1
-// IP Revision: 15
+// IP Revision: 16
 
 (* X_CORE_INFO = "DATAPATH,Vivado 2014.2" *)
 (* CHECK_LICENSE_TYPE = "MIPS_CPU_DATAPATH_0_1,DATAPATH,{}" *)

@@ -50,11 +50,9 @@ module DATAPATH(
 	wire[31:0] pc_p4;
 	wire[4:0] reg_dest;
 	wire[31:0] imm_ext,reg_data_dest;
-	integer con_pc;
 	
 	initial begin
 	   pc_i = 32'b0;
-	   con_pc = 0;
 	end
 
 	assign rs = inst_do[25:21];
@@ -91,19 +89,8 @@ module DATAPATH(
 	assign inst_a = pc_o;
 
 	always @(posedge clk or negedge clrn) begin
-	   if (~clrn) begin
-	       con_pc <= 0;
-	       pc_o <= 32'b0;
-       end
-	   else begin
-	       case (con_pc)
-    	       5 : begin
-    	           con_pc = 0;
-    	           pc_o <= pc_i;
-               end
-    	       default : con_pc = con_pc + 1;
-           endcase
-       end
+	   if (~clrn) pc_o <= 32'b0;
+	   else pc_o <= pc_i;
 	end
 
 	always @(*) begin

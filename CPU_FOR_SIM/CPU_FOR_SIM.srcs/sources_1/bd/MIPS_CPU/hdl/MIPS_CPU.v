@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.2 (win64) Build 928826 Thu Jun  5 18:21:07 MDT 2014
-//Date        : Mon Jan 19 18:31:27 2015
+//Date        : Mon Jan 19 19:04:24 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target MIPS_CPU.bd
 //Design      : MIPS_CPU
@@ -59,6 +59,7 @@ module MIPS_CPU
   wire [31:0]REGFILE_0_qb;
   wire clk_1;
   wire clk_wiz_0_clk_out1;
+  wire clk_wiz_0_clk_out2;
   wire restet_1;
 
   assign alu_pinout[31:0] = ALU32_0_r;
@@ -124,7 +125,7 @@ MIPS_CPU_DATAPATH_0_1 DATAPATH_0
         .reg_wn(DATAPATH_0_reg_wn));
 MIPS_CPU_DATA_MEM_0_1 DATA_MEM_0
        (.addr(DATAPATH_0_data_a),
-        .clk(clk_wiz_0_clk_out1),
+        .clk(clk_wiz_0_clk_out2),
         .data_in(DATAPATH_0_data_di),
         .data_out(DATA_MEM_0_data_out),
         .we(DATAPATH_0_data_we));
@@ -134,7 +135,7 @@ MIPS_CPU_INST_MEM_0_1 INST_MEM_0
        (.a(DATAPATH_0_inst_a),
         .inst_out(INST_MEM_0_inst_out));
 MIPS_CPU_REGFILE_0_1 REGFILE_0
-       (.clk(clk_wiz_0_clk_out1),
+       (.clk(clk_wiz_0_clk_out2),
         .clrn(restet_1),
         .d(DATAPATH_0_reg_d),
         .qa(REGFILE_0_qa),
@@ -146,5 +147,6 @@ MIPS_CPU_REGFILE_0_1 REGFILE_0
 MIPS_CPU_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(clk_1),
         .clk_out1(clk_wiz_0_clk_out1),
+        .clk_out2(clk_wiz_0_clk_out2),
         .reset(GND_1));
 endmodule
