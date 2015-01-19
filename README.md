@@ -1,7 +1,8 @@
 # SIMPLE_MIPS_CPU
 A simple MIPS CPU, 32bits, designed with verilogHDL.  
 
-**TOTAL----95%.**   
+**CPU for simulation----100%.**   
+**CPU for buttons and leds----0%.**  
 
 **ALU----100%.**  
 **REGFILE----100%.**  
@@ -9,10 +10,10 @@ A simple MIPS CPU, 32bits, designed with verilogHDL.
 **DATAPATH----100%.**
 
 Files:  
------
-**MIPS_CPU（MIPS_CPU.srcs）:**  
-Connect all sub IPCore.  
+=====
 
+Sub modules(SUB_MODULE):
+-----------
 **ALU（ALU\ALU.srcs）:**  
 1. ALU.v: ALU  
 2. LOGIC.v: AND/OR/XOR/LUI    
@@ -35,4 +36,16 @@ Connect all sub IPCore.
 1. INST_MEM.v: A list which has some inst, for test.    
 
 **DATA_MEM（DATA_MEM\DATA_MEM.srcs）:**  
-1. DATA_MEM.v: A ram, for test.    
+1. DATA_MEM.v: A ram, for test.   
+
+CPU for simulation(CPU_FOR_SIM):
+-----------
+**A project for function sim, use some instructs and data which are predefined.**  
+**IPCORE(IPCORE\\):**  
+Sub modules are here.  
+
+**CPU_FOR_SIM.srcs:**  
+1. MIPS_CPU_TB.sv: TestBench for function simulation.  
+2. MIPS_CPU.bd: CPU board.
+
+![](Image/1.png)
