@@ -1,5 +1,7 @@
 # SIMPLE_MIPS_CPU
-A simple MIPS CPU, 32bits, designed with verilogHDL.  
+<h3>A simple MIPS CPU, 32bits, designed with verilogHDL, bulit on xilinx vivoda.</h3>
+
+***  
 
 **CPU for simulation----90%.**   
 **CPU for buttons and leds----0%.**  
@@ -48,4 +50,5 @@ Sub modules are here.
 1. MIPS_CPU_TB.sv: TestBench for function simulation.  
 2. MIPS_CPU.bd: CPU board.
 
-![](Image/1.png)
+![](Image/1.png)  
+![](Image/2.png)

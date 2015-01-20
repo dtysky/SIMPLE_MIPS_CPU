@@ -29,8 +29,7 @@ module REGFILE(
     );
 
 	reg[31:0] reg32[31:0];
-	reg[31:0] r_qa,r_qb;
-
+	
     integer i;
     initial begin
 		for (i=1;i<=31;i=i+1)
@@ -46,12 +45,7 @@ module REGFILE(
 		end
 	end
 
-	always @(posedge clk) begin
-		r_qa <= reg32[rna];
-		r_qb <= reg32[rnb];
-	end
-	
-	assign qa = r_qa;
-	assign qb = r_qb;
+	assign	qa = reg32[rna];
+	assign	qb = reg32[rnb];
 
 endmodule

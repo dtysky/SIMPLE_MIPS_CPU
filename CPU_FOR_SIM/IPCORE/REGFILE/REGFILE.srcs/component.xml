@@ -18,7 +18,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>61740e20</spirit:value>
+            <spirit:value>3bf187ce</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -34,7 +34,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>61740e20</spirit:value>
+            <spirit:value>3bf187ce</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -219,7 +219,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/REGFILE.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_61740e20</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_3bf187ce</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -262,18 +262,18 @@
         <xilinx:taxonomy>/BaseIP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>REGFILE_v1_0</xilinx:displayName>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2015-01-19T08:46:46Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2015-01-20T02:11:57Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:ip:REGFILE:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU/REGFILE/REGFILE.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="xilinx.com:dtysky:REGFILE:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU/REGFILE/REGFILE.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="xilinx.com:user:REGFILE:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU/REGFILE/REGFILE.srcs</xilinx:tag>
-        <xilinx:tag xilinx:name="dtysky:user:REGFILE:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU/REGFILE/REGFILE.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="dtysky:user:REGFILE:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7387feee"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cd83405e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="5308c549"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="13dc89ee"/>
     </xilinx:packagingInfo>

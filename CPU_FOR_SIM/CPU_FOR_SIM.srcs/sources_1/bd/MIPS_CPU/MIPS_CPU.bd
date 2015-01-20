@@ -44,7 +44,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>pc_pinout</spirit:name>
+          <spirit:name>inst_pinout</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
             <spirit:vector>
@@ -64,7 +64,7 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>inst_pinout</spirit:name>
+          <spirit:name>pc_pinout</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
             <spirit:vector>
@@ -112,20 +112,12 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>REGFILE_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="REGFILE" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_REGFILE_0_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>clk_wiz_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_clk_wiz_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">20.000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">120.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">100</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -133,6 +125,13 @@
         <spirit:componentRef spirit:library="user" spirit:name="DATAPATH" spirit:vendor="dtysky" spirit:version="1.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_DATAPATH_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>REGFILE_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="REGFILE" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_REGFILE_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -145,8 +144,8 @@
       <spirit:adHocConnection>
         <spirit:name>restet_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="restet"/>
-        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clrn"/>
         <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="clrn"/>
+        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clrn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>CONTROL_UNIT_0_wreg</spirit:name>
@@ -315,12 +314,8 @@
         <spirit:name>clk_wiz_0_clk_out1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
         <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="clk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>clk_wiz_0_clk_out2</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out2"/>
-        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="DATA_MEM_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

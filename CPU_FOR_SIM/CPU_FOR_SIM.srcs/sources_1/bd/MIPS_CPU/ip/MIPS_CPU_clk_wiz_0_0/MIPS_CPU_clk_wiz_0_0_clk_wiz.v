@@ -55,8 +55,7 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// CLK_OUT1____20.000______0.000______50.0______332.831____301.601
-// CLK_OUT2___120.000______0.000______50.0______245.813____301.601
+// CLK_OUT1___100.000______0.000______50.0______130.958_____98.575
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,7 +69,6 @@ module MIPS_CPU_clk_wiz_0_0_clk_wiz
   input         clk_in1,
   // Clock out ports
   output        clk_out1,
-  output        clk_out2,
   // Status and control signals
   input         reset,
   output        locked
@@ -97,6 +95,7 @@ module MIPS_CPU_clk_wiz_0_0_clk_wiz
   wire        clkfbout_buf_MIPS_CPU_clk_wiz_0_0;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
+   wire clkout1_unused;
    wire clkout1b_unused;
    wire clkout2_unused;
    wire clkout2b_unused;
@@ -114,18 +113,14 @@ module MIPS_CPU_clk_wiz_0_0_clk_wiz
     .CLKOUT4_CASCADE      ("FALSE"),
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (5),
-    .CLKFBOUT_MULT_F      (48.000),
+    .DIVCLK_DIVIDE        (1),
+    .CLKFBOUT_MULT_F      (10.000),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (48.000),
+    .CLKOUT0_DIVIDE_F     (10.000),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (8),
-    .CLKOUT1_PHASE        (0.000),
-    .CLKOUT1_DUTY_CYCLE   (0.500),
-    .CLKOUT1_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (10.0),
     .REF_JITTER1          (0.010))
   mmcm_adv_inst
@@ -135,7 +130,7 @@ module MIPS_CPU_clk_wiz_0_0_clk_wiz
     .CLKFBOUTB           (clkfboutb_unused),
     .CLKOUT0             (clk_out1_MIPS_CPU_clk_wiz_0_0),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (clk_out2_MIPS_CPU_clk_wiz_0_0),
+    .CLKOUT1             (clkout1_unused),
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT2B            (clkout2b_unused),
@@ -187,10 +182,6 @@ module MIPS_CPU_clk_wiz_0_0_clk_wiz
    (.O   (clk_out1),
     .I   (clk_out1_MIPS_CPU_clk_wiz_0_0));
 
-
-  BUFG clkout2_buf
-   (.O   (clk_out2),
-    .I   (clk_out2_MIPS_CPU_clk_wiz_0_0));
 
 
 

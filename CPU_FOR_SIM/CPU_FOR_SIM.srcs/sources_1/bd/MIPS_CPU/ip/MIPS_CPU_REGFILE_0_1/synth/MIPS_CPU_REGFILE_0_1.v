@@ -48,7 +48,7 @@
 
 
 // IP VLNV: dtysky:user:REGFILE:1.0
-// IP Revision: 5
+// IP Revision: 6
 
 (* X_CORE_INFO = "REGFILE,Vivado 2014.2" *)
 (* CHECK_LICENSE_TYPE = "MIPS_CPU_REGFILE_0_1,REGFILE,{}" *)
