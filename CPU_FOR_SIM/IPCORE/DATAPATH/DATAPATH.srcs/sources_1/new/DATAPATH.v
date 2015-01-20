@@ -47,7 +47,7 @@ module DATAPATH(
 	wire signed [31:0] imm;
 	wire[25:0] addr;
 	reg[31:0] pc_i,pc_o;
-	wire[31:0] pc_p4;
+	wire[31:0] pc_p4,pc_jump;
 	wire[4:0] reg_dest;
 	wire[31:0] imm_ext,reg_data_dest;
 	
@@ -93,10 +93,12 @@ module DATAPATH(
 	   else pc_o <= pc_i;
 	end
 
+    ADDSUB32 ADDSUB1(pc_p4,imm_ext<<2,1'b0,pc_jump);
+    
 	always @(*) begin
 		case (con_pcsource)
 			2'b00 : pc_i <= pc_p4;
-			2'b01 : pc_i <= pc_p4 + imm_ext;
+			2'b01 : pc_i <= pc_jump;
 			2'b10 : pc_i <= reg_qa;
 			2'b11 : pc_i <= {pc_p4[31:28],addr,2'b0};
 			default : /* default */;

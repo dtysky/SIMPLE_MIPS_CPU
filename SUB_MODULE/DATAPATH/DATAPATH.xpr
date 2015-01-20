@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright (c) 2001-2013 Xilinx Inc, All rights reserved -->
 
-<Project Version="7" Minor="1" Path="D:/Spira_Heaven/0-MyWorks/MIPS_CPU/DATAPATH/DATAPATH.xpr">
+<Project Version="7" Minor="1" Path="D:/Spira_Heaven/0-MyWorks/MIPS_CPU/SUB_MODULE/DATAPATH/DATAPATH.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e2db12c05e954037b520414a17595679"/>
@@ -16,6 +16,13 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/new/ADDSUB32.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/DATAPATH.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>

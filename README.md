@@ -33,6 +33,7 @@ Sub modules(SUB_MODULE):
 
 **DATAPATH（DATAPATH\DATAPATH.srcs）:**  
 1. DATAPATH.v: DATAPATH  
+2. ADDSUB32.v: For processing next pc address when jump.  
 
 **INST_MEM（INST_MEM\INST_MEM.srcs）:**  
 1. INST_MEM.v: A list which has some inst, for test.    

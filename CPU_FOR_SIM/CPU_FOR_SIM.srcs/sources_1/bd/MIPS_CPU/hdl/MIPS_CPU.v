@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.2 (win64) Build 928826 Thu Jun  5 18:21:07 MDT 2014
-//Date        : Tue Jan 20 10:12:03 2015
+//Date        : Tue Jan 20 11:22:27 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target MIPS_CPU.bd
 //Design      : MIPS_CPU
@@ -87,7 +87,7 @@ MIPS_CPU_CONTROL_UNIT_0_1 CONTROL_UNIT_0
         .wmem(CONTROL_UNIT_0_wmem),
         .wreg(CONTROL_UNIT_0_wreg),
         .z(DATAPATH_0_con_z));
-MIPS_CPU_DATAPATH_0_1 DATAPATH_0
+MIPS_CPU_DATAPATH_0_0 DATAPATH_0
        (.alu_a(DATAPATH_0_alu_a),
         .alu_aluc(DATAPATH_0_alu_aluc),
         .alu_b(DATAPATH_0_alu_b),

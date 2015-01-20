@@ -4,52 +4,52 @@
 preplace port clk -pg 1 -y 20 -defaultsOSRD
 preplace port restet -pg 1 -y 40 -defaultsOSRD
 preplace portBus data_pinout -pg 1 -y 320 -defaultsOSRD
-preplace portBus pc_pinout -pg 1 -y 300 -defaultsOSRD
+preplace portBus pc_pinout -pg 1 -y 390 -defaultsOSRD
 preplace portBus alu_pinout -pg 1 -y 360 -defaultsOSRD
 preplace portBus inst_pinout -pg 1 -y 340 -defaultsOSRD
-preplace inst REGFILE_0 -pg 1 -lvl 3 -y 230 -defaultsOSRD
-preplace inst INST_MEM_0 -pg 1 -lvl 3 -y 620 -defaultsOSRD
-preplace inst DATA_MEM_0 -pg 1 -lvl 3 -y 450 -defaultsOSRD
+preplace inst REGFILE_0 -pg 1 -lvl 3 -y 370 -defaultsOSRD
+preplace inst INST_MEM_0 -pg 1 -lvl 3 -y 740 -defaultsOSRD
+preplace inst DATA_MEM_0 -pg 1 -lvl 3 -y 600 -defaultsOSRD
 preplace inst CONTROL_UNIT_0 -pg 1 -lvl 1 -y 420 -defaultsOSRD
-preplace inst ALU32_0 -pg 1 -lvl 2 -y 120 -defaultsOSRD
-preplace inst DATAPATH_0 -pg 1 -lvl 2 -y 570 -defaultsOSRD
+preplace inst ALU32_0 -pg 1 -lvl 3 -y 160 -defaultsOSRD
+preplace inst DATAPATH_0 -pg 1 -lvl 2 -y 560 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 160 -defaultsOSRD
-preplace netloc DATAPATH_0_reg_d 1 2 1 880
-preplace netloc CONTROL_UNIT_0_m2reg 1 1 1 410
-preplace netloc DATAPATH_0_reg_we 1 2 1 860
-preplace netloc REGFILE_0_qa 1 1 3 530 330 NJ 360 1270
-preplace netloc DATAPATH_0_con_z 1 0 3 110 100 NJ 40 850
-preplace netloc CONTROL_UNIT_0_regrt 1 1 1 430
-preplace netloc DATAPATH_0_data_we 1 2 1 970
-preplace netloc REGFILE_0_qb 1 1 3 540 350 NJ 530 1260
-preplace netloc ALU32_0_r 1 1 3 480 190 950 350 NJ
-preplace netloc DATAPATH_0_alu_aluc 1 1 2 510 230 800
-preplace netloc DATA_MEM_0_data_out 1 1 3 470 320 NJ 370 1290
-preplace netloc DATAPATH_0_inst_a 1 2 1 980
-preplace netloc INST_MEM_0_inst_out 1 1 3 540 790 NJ 570 1310
-preplace netloc CONTROL_UNIT_0_aluimm 1 1 1 390
-preplace netloc CONTROL_UNIT_0_jal 1 1 1 420
-preplace netloc restet_1 1 0 3 NJ 40 460 50 NJ
-preplace netloc DATAPATH_0_data_di 1 2 1 960
-preplace netloc DATAPATH_0_con_func 1 0 3 130 280 NJ 280 830
-preplace netloc CONTROL_UNIT_0_sext 1 1 1 380
-preplace netloc CONTROL_UNIT_0_shfit 1 1 1 400
-preplace netloc clk_1 1 0 1 100
-preplace netloc clk_wiz_0_clk_out1 1 1 2 450 340 940
-preplace netloc DATAPATH_0_reg_rna 1 2 1 900
-preplace netloc DATAPATH_0_alu_a 1 1 2 490 200 820
-preplace netloc DATAPATH_0_pc_out 1 2 2 990 540 NJ
+preplace netloc DATAPATH_0_reg_d 1 2 1 860
+preplace netloc CONTROL_UNIT_0_m2reg 1 1 1 390
+preplace netloc REGFILE_0_qa 1 1 3 500 260 NJ 260 1420
+preplace netloc DATAPATH_0_reg_we 1 2 1 840
+preplace netloc DATAPATH_0_con_z 1 0 3 110 560 NJ 340 780
+preplace netloc CONTROL_UNIT_0_regrt 1 1 1 420
+preplace netloc REGFILE_0_qb 1 1 3 520 310 NJ 490 1420
+preplace netloc DATAPATH_0_data_we 1 2 1 940
+preplace netloc DATAPATH_0_alu_aluc 1 2 1 830
+preplace netloc ALU32_0_r 1 1 3 480 90 NJ 90 1440
+preplace netloc DATA_MEM_0_data_out 1 1 3 490 300 NJ 480 1430
+preplace netloc DATAPATH_0_inst_a 1 2 1 840
+preplace netloc CONTROL_UNIT_0_aluimm 1 1 1 370
+preplace netloc CONTROL_UNIT_0_jal 1 1 1 410
+preplace netloc INST_MEM_0_inst_out 1 1 3 520 780 NJ 690 1450
+preplace netloc restet_1 1 0 3 NJ 220 450 290 NJ
+preplace netloc DATAPATH_0_data_di 1 2 1 930
+preplace netloc DATAPATH_0_con_func 1 0 3 110 280 NJ 330 790
+preplace netloc CONTROL_UNIT_0_sext 1 1 1 360
+preplace netloc CONTROL_UNIT_0_shfit 1 1 1 380
+preplace netloc clk_1 1 0 1 110
+preplace netloc DATAPATH_0_reg_rna 1 2 1 880
+preplace netloc DATAPATH_0_alu_a 1 2 1 810
+preplace netloc clk_wiz_0_clk_out1 1 1 2 470 280 900
+preplace netloc DATAPATH_0_pc_out 1 2 2 920 500 NJ
 preplace netloc DATAPATH_0_reg_rnb 1 2 1 910
-preplace netloc DATAPATH_0_alu_b 1 1 2 500 210 810
-preplace netloc DATAPATH_0_con_op 1 0 3 120 90 NJ 30 840
-preplace netloc CONTROL_UNIT_0_pcsource 1 1 1 350
-preplace netloc CONTROL_UNIT_0_wmem 1 1 1 370
-preplace netloc DATAPATH_0_data_a 1 2 1 950
-preplace netloc DATAPATH_0_reg_wn 1 2 1 870
-preplace netloc CONTROL_UNIT_0_aluc 1 1 1 360
-preplace netloc ALU32_0_z 1 1 2 520 220 830
-preplace netloc CONTROL_UNIT_0_wreg 1 1 1 440
-levelinfo -pg 1 80 240 670 1140 1330
+preplace netloc DATAPATH_0_alu_b 1 2 1 820
+preplace netloc DATAPATH_0_con_op 1 0 3 100 270 NJ 320 800
+preplace netloc CONTROL_UNIT_0_pcsource 1 1 1 330
+preplace netloc CONTROL_UNIT_0_wmem 1 1 1 350
+preplace netloc DATAPATH_0_data_a 1 2 1 910
+preplace netloc DATAPATH_0_reg_wn 1 2 1 850
+preplace netloc CONTROL_UNIT_0_aluc 1 1 1 340
+preplace netloc ALU32_0_z 1 1 3 510 230 NJ 230 1420
+preplace netloc CONTROL_UNIT_0_wreg 1 1 1 430
+levelinfo -pg 1 80 220 650 1300 1470
 ",
 }
 0
