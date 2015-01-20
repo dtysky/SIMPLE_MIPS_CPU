@@ -29,7 +29,7 @@ module DATA_MEM(
 	reg[31:0] ram[0:31];
 
 	always @(posedge clk) begin
-		if(we) ram[addr] <= data_in;
+		if(we) ram[addr[6:2]] <= data_in;
 	end
 	
 	assign data_out = ram[addr[6:2]];

@@ -18,7 +18,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b56905e1</spirit:value>
+            <spirit:value>29e5df55</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -34,7 +34,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b56905e1</spirit:value>
+            <spirit:value>29e5df55</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -365,7 +365,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/CONTROL_UNIT.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_b56905e1</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_29e5df55</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -508,17 +508,17 @@
         <xilinx:taxonomy>/BaseIP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>CONTROL_UNIT_v1_0</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2015-01-18T11:37:29Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2015-01-20T03:39:00Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:ip:CONTROL_UNIT:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU/CONTROL_UNIT/CONTROL_UNIT.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="xilinx.com:user:CONTROL_UNIT:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU/CONTROL_UNIT/CONTROL_UNIT.srcs</xilinx:tag>
-        <xilinx:tag xilinx:name="dtysky:user:CONTROL_UNIT:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU/CONTROL_UNIT/CONTROL_UNIT.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="dtysky:user:CONTROL_UNIT:1.0_ARCHIVE_LOCATION">D:/Spira_Heaven/0-MyWorks/MIPS_CPU</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2014.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c07d7e72"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4844c01c"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="0a431ec9"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="a00106af"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="3d633654"/>

@@ -91,20 +91,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>CONTROL_UNIT_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="CONTROL_UNIT" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_CONTROL_UNIT_0_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>DATA_MEM_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="DATA_MEM" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_DATA_MEM_0_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>INST_MEM_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="INST_MEM" spirit:vendor="dtysky" spirit:version="1.1"/>
         <spirit:configurableElementValues>
@@ -132,6 +118,20 @@
         <spirit:componentRef spirit:library="user" spirit:name="DATAPATH" spirit:vendor="dtysky" spirit:version="1.2"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_DATAPATH_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>CONTROL_UNIT_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="CONTROL_UNIT" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_CONTROL_UNIT_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>DATA_MEM_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="DATA_MEM" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_DATA_MEM_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -168,9 +168,9 @@
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
-        <spirit:internalPortReference spirit:componentRef="DATA_MEM_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="DATA_MEM_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>CONTROL_UNIT_0_wreg</spirit:name>

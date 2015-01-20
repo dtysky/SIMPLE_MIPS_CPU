@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 20 11:22:27 2015" VIVADOVERSION="2014.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 20 12:13:01 2015" VIVADOVERSION="2014.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="MIPS_CPU_imp" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -935,9 +935,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DATA_MEM_0" PORT="clk"/>
             <CONNECTION INSTANCE="REGFILE_0" PORT="clk"/>
             <CONNECTION INSTANCE="DATAPATH_0" PORT="clk"/>
+            <CONNECTION INSTANCE="DATA_MEM_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" SIGIS="rst"/>

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: dtysky:user:CONTROL_UNIT:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 (* X_CORE_INFO = "CONTROL_UNIT,Vivado 2014.2" *)
 (* CHECK_LICENSE_TYPE = "MIPS_CPU_CONTROL_UNIT_0_1,CONTROL_UNIT,{}" *)

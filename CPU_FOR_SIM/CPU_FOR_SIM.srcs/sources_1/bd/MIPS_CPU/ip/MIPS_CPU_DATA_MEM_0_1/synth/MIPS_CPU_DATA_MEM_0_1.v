@@ -48,7 +48,7 @@
 
 
 // IP VLNV: dtysky:user:DATA_MEM:1.0
-// IP Revision: 3
+// IP Revision: 4
 
 (* X_CORE_INFO = "DATA_MEM,Vivado 2014.2" *)
 (* CHECK_LICENSE_TYPE = "MIPS_CPU_DATA_MEM_0_1,DATA_MEM,{}" *)

@@ -93,7 +93,7 @@ module DATAPATH(
 	   else pc_o <= pc_i;
 	end
 
-    ADDSUB32 ADDSUB1(pc_p4,imm_ext,pc_jump);
+    ADDSUB32 ADDSUB1(pc_p4,imm_ext<<2,1'b0,pc_jump);
     
 	always @(*) begin
 		case (con_pcsource)

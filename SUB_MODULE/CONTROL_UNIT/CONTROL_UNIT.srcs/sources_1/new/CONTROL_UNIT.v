@@ -88,8 +88,8 @@ module CONTROL_UNIT(
 	assign shfit = cmd_out[9];
 	assign aluimm = cmd_out[8];
 	assign sext = cmd_out[7];
-	assign wmem = cmd_out[6];
-	assign aluc = cmd_out[5:2];
+	assign aluc = cmd_out[6:3];
+	assign wmem = cmd_out[2];
 	assign pcsource = cmd_out[1:0];
 
 endmodule

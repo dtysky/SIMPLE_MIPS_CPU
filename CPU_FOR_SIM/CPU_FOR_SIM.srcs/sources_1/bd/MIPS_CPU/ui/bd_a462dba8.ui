@@ -8,9 +8,9 @@ preplace portBus pc_pinout -pg 1 -y 390 -defaultsOSRD
 preplace portBus alu_pinout -pg 1 -y 360 -defaultsOSRD
 preplace portBus inst_pinout -pg 1 -y 340 -defaultsOSRD
 preplace inst REGFILE_0 -pg 1 -lvl 3 -y 370 -defaultsOSRD
-preplace inst INST_MEM_0 -pg 1 -lvl 3 -y 740 -defaultsOSRD
 preplace inst DATA_MEM_0 -pg 1 -lvl 3 -y 600 -defaultsOSRD
 preplace inst CONTROL_UNIT_0 -pg 1 -lvl 1 -y 420 -defaultsOSRD
+preplace inst INST_MEM_0 -pg 1 -lvl 3 -y 740 -defaultsOSRD
 preplace inst ALU32_0 -pg 1 -lvl 3 -y 160 -defaultsOSRD
 preplace inst DATAPATH_0 -pg 1 -lvl 2 -y 560 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 160 -defaultsOSRD
