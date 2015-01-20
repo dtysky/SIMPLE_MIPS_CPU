@@ -4,7 +4,7 @@
 ***  
 
 **CPU for simulation----100%.**   
-**CPU for buttons and leds----0%.**  
+**CPU on board.----0%.**  
 
 **ALU----100%.**  
 **REGFILE----100%.**  
@@ -41,6 +41,9 @@ Sub modules(SUB_MODULE):
 **DATA_MEM（DATA_MEM\DATA_MEM.srcs）:**  
 1. DATA_MEM.v: A ram, for test.   
 
+**KEY2INST（KEY2INST\KEY2INST.srcs）:**  
+1. KEY2INST.v: Convert keys' states to CPU instruction.     
+
 CPU for simulation(CPU_FOR_SIM):
 -----------
 **A project for function sim, use some instructs and data which are predefined.**  
@@ -52,4 +55,10 @@ Sub modules are here.
 2. MIPS_CPU.bd: CPU board.
 
 ![](Image/1.png)  
-![](Image/2.png)
+![](Image/2.png)  
+
+CPU on board.(CPU_ON_BOARD):
+-----------
+**A project for testing on board, you can input cmd by keys, then leds willshow the result.**  
+**IPCORE(IPCORE\\):**  
+Sub modules are here. 
