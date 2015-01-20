@@ -4,7 +4,7 @@
 ***  
 
 **CPU for simulation----100%.**   
-**CPU on board.----0%.**  
+**CPU on board.----50%.**  
 
 **ALU----100%.**  
 **REGFILE----100%.**  
@@ -29,7 +29,7 @@ Sub modules(SUB_MODULE):
 
 **CONTROL_UNIT（CONTROL_UNIT\CONTROL_UNIT.srcs）:**  
 1. CONTROL_UNIT.v: CONTROL_UNIT  
-2. CONTROL_UNIT.sv: TestBench for CONTROL_UNIT.
+2. CONTROL_UNIT_TB.sv: TestBench for CONTROL_UNIT.
 
 **DATAPATH（DATAPATH\DATAPATH.srcs）:**  
 1. DATAPATH.v: DATAPATH  
@@ -43,6 +43,7 @@ Sub modules(SUB_MODULE):
 
 **KEY2INST（KEY2INST\KEY2INST.srcs）:**  
 1. KEY2INST.v: Convert keys' states to CPU instruction.     
+2. KEY2INST_TB.sv: TestBench for KEY2INST.  
 
 CPU for simulation(CPU_FOR_SIM):
 -----------
