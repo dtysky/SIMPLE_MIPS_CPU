@@ -1,5 +1,6 @@
 # SIMPLE_MIPS_CPU  
 <h3>A simple MIPS CPU, 32bits, designed with verilogHDL, bulit on xilinx vivado.</h3>
+<h4>Design for Southeast University : Computer Organization and Design.</h4>  
 
 ***  
 
