@@ -12,7 +12,7 @@
 **CONTROL_UNIT----100%.**  
 **DATAPATH----100%.**
 
-Files:  
+Files and Descriptions:  
 =====
 
 Sub modules(SUB_MODULE):
@@ -87,3 +87,14 @@ An exmple:
 
 3. Run, get result = "0000000000000000" + "0000000100000000"= "0000000100000000":
 ![](Image/7.jpg) 
+
+AUTHOR
+---
+Dai Tianyu(dtysky)   
+[dtysky@outlook.com](dtysky@outlook.com)  
+[http://github.com/dtysky](http://github.com/dtysky)
+
+Copyright
+---
+Copyright © 2014, Dai Tianyu(dtysky). All Rights Reserved.  
+This project is free software and released under the [MIT License (MIT)](http://mit-license.org/).
