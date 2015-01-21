@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 21 12:43:28 2015" VIVADOVERSION="2014.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 21 12:59:36 2015" VIVADOVERSION="2014.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="MIPS_CPU_imp" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -9,15 +9,15 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_button">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="KEY2INST_0" PORT="button"/>
-        <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="button"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" NAME="led" SIGIS="undef" SIGNAME="SHOW_ON_LED_0_led">
       <CONNECTIONS>
         <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="led"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="key" SIGIS="undef" SIGNAME="External_Ports_key">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="KEY2INST_0" PORT="button"/>
+        <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="button"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -402,9 +402,9 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_button">
+        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_key">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="key"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="inst_a" SIGIS="undef" SIGNAME="DATAPATH_0_inst_a">
@@ -493,9 +493,9 @@
             <CONNECTION INSTANCE="ALU32_0" PORT="r"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_button">
+        <PORT DIR="I" NAME="button" SIGIS="undef" SIGNAME="External_Ports_key">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="button"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="key"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="led" SIGIS="undef" SIGNAME="SHOW_ON_LED_0_led">

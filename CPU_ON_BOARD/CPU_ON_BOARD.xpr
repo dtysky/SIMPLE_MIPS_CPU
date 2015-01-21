@@ -30,8 +30,6 @@
         <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_REGFILE_0_0/MIPS_CPU_REGFILE_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_CONTROL_UNIT_0_0/MIPS_CPU_CONTROL_UNIT_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_DATA_MEM_0_0/MIPS_CPU_DATA_MEM_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="hw_handoff/MIPS_CPU.hwh"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="MIPS_CPU_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="hdl/MIPS_CPU.v"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/MIPS_CPU/hdl/MIPS_CPU_wrapper.v">
@@ -50,6 +48,12 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/new/MIPS_CPU.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
@@ -73,7 +77,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
@@ -86,6 +90,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
   </Runs>
 </Project>

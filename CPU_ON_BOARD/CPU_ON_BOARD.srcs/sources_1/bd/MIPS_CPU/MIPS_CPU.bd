@@ -28,9 +28,9 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>button</spirit:name>
+          <spirit:name>led</spirit:name>
           <spirit:wire>
-            <spirit:direction>in</spirit:direction>
+            <spirit:direction>out</spirit:direction>
             <spirit:vector>
               <spirit:left>15</spirit:left>
               <spirit:right>0</spirit:right>
@@ -38,9 +38,9 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>led</spirit:name>
+          <spirit:name>key</spirit:name>
           <spirit:wire>
-            <spirit:direction>out</spirit:direction>
+            <spirit:direction>in</spirit:direction>
             <spirit:vector>
               <spirit:left>15</spirit:left>
               <spirit:right>0</spirit:right>
@@ -130,7 +130,7 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>button_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="button"/>
+        <spirit:externalPortReference spirit:portRef="key"/>
         <spirit:internalPortReference spirit:componentRef="KEY2INST_0" spirit:portRef="button"/>
         <spirit:internalPortReference spirit:componentRef="SHOW_ON_LED_0" spirit:portRef="button"/>
       </spirit:adHocConnection>

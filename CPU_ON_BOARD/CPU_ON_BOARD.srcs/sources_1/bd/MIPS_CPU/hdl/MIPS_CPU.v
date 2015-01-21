@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.2 (win64) Build 928826 Thu Jun  5 18:21:07 MDT 2014
-//Date        : Wed Jan 21 12:43:29 2015
+//Date        : Wed Jan 21 12:59:36 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target MIPS_CPU.bd
 //Design      : MIPS_CPU
@@ -11,11 +11,11 @@
 
 (* CORE_GENERATION_INFO = "MIPS_CPU,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=7,numHierBlks=0,maxHierDepth=0}" *) 
 module MIPS_CPU
-   (button,
-    inclk,
+   (inclk,
+    key,
     led);
-  input [15:0]button;
   input inclk;
+  input [15:0]key;
   output [15:0]led;
 
   wire [31:0]ALU32_0_r;
@@ -56,7 +56,7 @@ module MIPS_CPU
   wire clk_wiz_0_clk_out1;
   wire inclk_1;
 
-  assign button_1 = button[15:0];
+  assign button_1 = key[15:0];
   assign inclk_1 = inclk;
   assign led[15:0] = SHOW_ON_LED_0_led;
 MIPS_CPU_ALU32_0_0 ALU32_0
