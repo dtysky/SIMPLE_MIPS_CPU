@@ -5,7 +5,7 @@
 ***  
 
 **CPU for simulation----100%.**   
-**CPU on board.----90%.**  
+**CPU on board.----100%.**  
 
 **ALU----100%.**  
 **REGFILE----100%.**  
@@ -72,7 +72,18 @@ CPU on board.(CPU_ON_BOARD):
 Sub modules are here. 
 
 **CPU_ON_BOARD.srcs:**  
-1. MIPS_CPU_TB.sv: TestBench for function simulation.  
+1. MIPS_CPU.xdc: Constraints file for Basys3 board.  
 2. MIPS_CPU.bd: CPU board.  
 
-![](Image/4.png)
+![](Image/4.png)  
+
+An exmple:  
+ 
+1. Reset:  
+![](Image/5.jpg) 
+
+2. Set data_b high 8bits to "00000001":  
+![](Image/6.jpg) 
+
+3. Run, get result = "0000000000000000" + "0000000100000000"= "0000000100000000":
+![](Image/7.jpg) 
