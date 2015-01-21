@@ -62,5 +62,12 @@ Sub modules are here.
 CPU on board.(CPU_ON_BOARD):
 -----------
 **A project for testing on board, you can input cmd by keys, then leds willshow the result.**  
+**The function of buttons and leds are here:**  
+![](Image/3.png)
+
 **IPCORE(IPCORE\\):**  
 Sub modules are here. 
+
+**CPU_ON_BOARD.srcs:**  
+1. MIPS_CPU_TB.sv: TestBench for function simulation.  
+2. MIPS_CPU.bd: CPU board.
