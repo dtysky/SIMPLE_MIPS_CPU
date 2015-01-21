@@ -5,7 +5,7 @@
 ***  
 
 **CPU for simulation----100%.**   
-**CPU on board.----70%.**  
+**CPU on board.----90%.**  
 
 **ALU----100%.**  
 **REGFILE----100%.**  
