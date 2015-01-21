@@ -70,4 +70,6 @@ Sub modules are here.
 
 **CPU_ON_BOARD.srcs:**  
 1. MIPS_CPU_TB.sv: TestBench for function simulation.  
-2. MIPS_CPU.bd: CPU board.
+2. MIPS_CPU.bd: CPU board.  
+
+![](Image/4.png)
