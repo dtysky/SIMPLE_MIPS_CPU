@@ -50,11 +50,11 @@ module KEY2INST_TB();
 		end
 	endfunction : data_creat
 
-	function button_action(select_now);
+	function button_action(bit[1:0] select_now);
 		button = {rst_n,run,load,cmd,select,data_now[select_now]};
 	endfunction : button_action
 
-	task data_load(select_now);
+	task data_load(bit[1:0] select_now);
 		@(posedge clk)
 		select = select_now;
 		button_action(select_now);
@@ -79,9 +79,11 @@ module KEY2INST_TB();
 	endtask : check
 
 	initial begin 
-		rst_n = 1'b1;
+		rst_n = 1'b0;
 		run = 1'b0;
 		load = 1'b0;
+		repeat(10) @(posedge clk);
+		rst_n = 1'b1;
 		for (int i = 0; i < 8; i++) begin
 			data_creat();
 			for (int j = 0; j < 4; j++) begin

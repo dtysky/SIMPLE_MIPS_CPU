@@ -50,8 +50,8 @@ module KEY2INST(
 	parameter [4:0]
 		st_idle = 5'b00001,
 		st_load = 5'b00010,
-		st_run = 5'b001000,
-		st_wrom = 5'b010000,
+		st_run = 5'b00100,
+		st_wrom = 5'b01000,
 		st_reset = 5'b10000;
 
 	//func
@@ -87,7 +87,7 @@ module KEY2INST(
 	assign data = button[7:0];
 
 	assign clrn = r_clrn;
-	assign inst_do = inst_do[inst_a[6:2]];
+	assign inst_do = inst_rom[inst_a[6:2]];
 
 	integer i;
 	initial begin
@@ -101,14 +101,14 @@ module KEY2INST(
 	//Cmd_do
 	always @(*) begin 
 		case (cmd)
-			cmd_add : cmd_do <= {6'b000001,6'b000010,6'b000011,func_add};
-			cmd_sub : cmd_do <= {6'b000001,6'b000010,6'b000011,func_sub};
-			cmd_and : cmd_do <= {6'b000001,6'b000010,6'b000011,func_and};
-			cmd_or : cmd_do <= {6'b000001,6'b000010,6'b000011,func_or};
-			cmd_xor : cmd_do <= {6'b000001,6'b000010,6'b000011,func_xor};
-			cmd_sll : cmd_do <= {6'b000001,6'b000010,6'b000011,func_sll};
-			cmd_srl : cmd_do <= {6'b000001,6'b000010,6'b000011,func_srl};
-			cmd_sra : cmd_do <= {6'b000001,6'b000010,6'b000011,func_sra};
+			cmd_add : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_add};
+			cmd_sub : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_sub};
+			cmd_and : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_and};
+			cmd_or : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_or};
+			cmd_xor : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_xor};
+			cmd_sll : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_sll};
+			cmd_srl : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_srl};
+			cmd_sra : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_sra};
 			default : cmd_do <= 26'b0;
 		endcase
 	
@@ -121,14 +121,17 @@ module KEY2INST(
 			case (st)
 				st_idle : begin 
 					case ({run,load})
-						2'b1x : st <= st_wrom;
+						//2'b1x : st <= st_wrom;
+						2'b10 : st <= st_wrom;
+						2'b11 : st <= st_wrom;
 						2'b01 : st <= st_load;
 						default : st <= st;
 					endcase
 				end
 				st_wrom : st <= st_run;
-				st_run : st <= st_idle;
+				st_run : st <= run ? st : st_idle;
 				st_reset : st <= st_idle;
+				st_load : st <= st_idle;
 				default : st <= st_reset;
 			endcase
 		end
