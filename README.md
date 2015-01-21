@@ -46,6 +46,9 @@ Sub modules(SUB_MODULE):
 1. KEY2INST.v: Convert keys' states to CPU instruction.     
 2. KEY2INST_TB.sv: TestBench for KEY2INST.  
 
+**SHOW_ON_LED（SHOW_ON_LED\SHOW_ON_LED.srcs）:**  
+1. SHOW_ON_LED.v: Show result or keys' state on leds.    
+
 CPU for simulation(CPU_FOR_SIM):
 -----------
 **A project for function sim, use some instructs and data which are predefined.**  
