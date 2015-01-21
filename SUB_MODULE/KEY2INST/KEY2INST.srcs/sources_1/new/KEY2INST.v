@@ -21,7 +21,7 @@
 
 
 module KEY2INST(
-	input clk,rst_n,
+	input clk,
 	input[15:0] button,
 	input[31:0] inst_a,
 	output[31:0] inst_do,
@@ -66,6 +66,7 @@ module KEY2INST(
 	func_sra = 6'b000011;
 
 	reg[31:0] inst_rom[31:0];
+	wire rst_n;
 	wire run;
 	wire load;
 	wire[2:0] cmd;
@@ -74,9 +75,11 @@ module KEY2INST(
 	reg[4:0] st;
 	reg r_clrn;
 
-	reg[7:0] data_al,data_ah,data_bl,data_bh;
+	//ah,al,bh,bl
+	reg[7:0] data_now[3:0];
 	reg[25:0] cmd_do;
 
+	assign rst_n = button[15];
 	assign run = button[14];
 	assign load = button[13];
 	assign cmd = button[12:10];
@@ -89,10 +92,8 @@ module KEY2INST(
 	integer i;
 	initial begin
 		st <= st_idle;
-		data_al <= 32'b0;
-		data_ah <= 32'b0;
-		data_bl <= 32'b0;
-		data_bh <= 32'b0;
+		for(i=0;i<4;i=i+1)
+			data_now[i] <= 8'b0;
 		for(i=0;i<32;i=i+1)
 			inst_rom[i] <= 32'b0;
 	end
@@ -138,27 +139,17 @@ module KEY2INST(
 		case (st)
 			st_reset : begin
 				r_clrn <= 1'b0;
-				data_al <= 8'b0;
-				data_ah <= 8'b0;
-				data_bl <= 8'b0;
-				data_bh <= 8'b0;
+				for(i=0;i<4;i=i+1)
+					data_now[i] <= 8'b0;
 			end
-			st_load : begin 
-				case (select)
-					sl_al : data_al <= data;
-					sl_ah : data_ah <= data;
-					sl_bl : data_bl <= data;
-					sl_bh : data_bh <= data;
-					default : /* default */;
-				endcase
-			end 
+			st_load : data_now[select] <= data;
 			st_wrom : begin 
 				//Clear all regs, set pc to 0;
 				r_clrn <= 1'b0;
 				//r1 = r0(0) + a;
-				inst_rom[0] <= {6'b001000,5'b00000,5'b00001,data_ah,data_al};
+				inst_rom[0] <= {6'b001000,5'b00000,5'b00001,data_now[0],data_now[1]};
 				//r2 = r0(0) + b;
-				inst_rom[1] <= {6'b001000,5'b00000,5'b00010,data_ah,data_al};
+				inst_rom[1] <= {6'b001000,5'b00000,5'b00010,data_now[2],data_now[3]};
 				//r3 = r1 (cmd) r2;
 				inst_rom[2] <= {6'b0,cmd_do};
 				//loop(j 26'd4)
