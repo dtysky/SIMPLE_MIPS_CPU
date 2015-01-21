@@ -1,7 +1,8 @@
 {
-   comment_0: "Project home page: 
+   comment_0: "Project Homepage: 
 https://github.com/dtysky/SIMPLE_MIPS_CPU",
    commentid: "comment_0|",
+   fillcolor_comment_0: "",
    font_comment_0: "27",
    guistr: "# # String gsaved with Nlview version 6.4-r1  2014-02-28 bk=1.3047 VDI=34 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
@@ -53,9 +54,10 @@ preplace netloc DATAPATH_0_reg_wn 1 2 1 850
 preplace netloc CONTROL_UNIT_0_aluc 1 1 1 340
 preplace netloc ALU32_0_z 1 1 3 510 230 NJ 230 1420
 preplace netloc CONTROL_UNIT_0_wreg 1 1 1 430
-preplace cgraphic comment_0 place abs 419 836 textcolor 6 linecolor 3 linewidth 0
+preplace cgraphic comment_0 place abs 80 818 textcolor 6 linecolor 3 linewidth 0
 levelinfo -pg 1 80 220 650 1300 1470
 ",
+   linecolor_comment_0: "",
    textcolor_comment_0: "#ff0000",
 }
 0

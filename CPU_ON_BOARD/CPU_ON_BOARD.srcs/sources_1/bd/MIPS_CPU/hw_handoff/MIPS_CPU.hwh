@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 21 12:59:36 2015" VIVADOVERSION="2014.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 21 13:38:15 2015" VIVADOVERSION="2014.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="MIPS_CPU_imp" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -284,6 +284,7 @@
         <PORT DIR="O" NAME="con_op" SIGIS="undef" SIGNAME="DATAPATH_0_con_op">
           <CONNECTIONS>
             <CONNECTION INSTANCE="CONTROL_UNIT_0" PORT="op"/>
+            <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="inst_op"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="con_func" SIGIS="undef" SIGNAME="DATAPATH_0_con_func">
@@ -488,6 +489,16 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="inst_op" SIGIS="undef" SIGNAME="DATAPATH_0_con_op">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DATAPATH_0" PORT="con_op"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="alu_r" SIGIS="undef" SIGNAME="ALU32_0_r">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ALU32_0" PORT="r"/>
@@ -984,6 +995,7 @@
             <CONNECTION INSTANCE="REGFILE_0" PORT="clk"/>
             <CONNECTION INSTANCE="KEY2INST_0" PORT="clk"/>
             <CONNECTION INSTANCE="DATA_MEM_0" PORT="clk"/>
+            <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" SIGIS="rst"/>

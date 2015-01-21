@@ -127,6 +127,7 @@
         <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="KEY2INST_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="DATA_MEM_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="SHOW_ON_LED_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>button_1</spirit:name>
@@ -138,6 +139,7 @@
         <spirit:name>DATAPATH_0_con_op</spirit:name>
         <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="con_op"/>
         <spirit:internalPortReference spirit:componentRef="CONTROL_UNIT_0" spirit:portRef="op"/>
+        <spirit:internalPortReference spirit:componentRef="SHOW_ON_LED_0" spirit:portRef="inst_op"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>DATAPATH_0_con_func</spirit:name>

@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.2 (win64) Build 928826 Thu Jun  5 18:21:07 MDT 2014
-//Date        : Wed Jan 21 12:59:36 2015
+//Date        : Wed Jan 21 13:38:15 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target MIPS_CPU.bd
 //Design      : MIPS_CPU
@@ -140,6 +140,8 @@ MIPS_CPU_REGFILE_0_0 REGFILE_0
 MIPS_CPU_SHOW_ON_LED_0_0 SHOW_ON_LED_0
        (.alu_r(ALU32_0_r),
         .button(button_1),
+        .clk(clk_wiz_0_clk_out1),
+        .inst_op(DATAPATH_0_con_op),
         .led(SHOW_ON_LED_0_led));
 MIPS_CPU_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(inclk_1),
