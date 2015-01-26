@@ -106,9 +106,9 @@ module KEY2INST(
 			cmd_and : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_and};
 			cmd_or : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_or};
 			cmd_xor : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_xor};
-			cmd_sll : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_sll};
-			cmd_srl : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_srl};
-			cmd_sra : cmd_do <= {5'b00001,5'b00010,5'b00011,5'b0,func_sra};
+			cmd_sll : cmd_do <= {5'b0,5'b00001,5'b00011,data_now[3][4:0],func_sll};
+			cmd_srl : cmd_do <= {5'b0,5'b00001,5'b00011,data_now[3][4:0],func_srl};
+			cmd_sra : cmd_do <= {5'b0,5'b00001,5'b00011,data_now[3][4:0],func_sra};
 			default : cmd_do <= 26'b0;
 		endcase
 	

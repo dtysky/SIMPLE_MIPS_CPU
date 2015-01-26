@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 21 13:38:15 2015" VIVADOVERSION="2014.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 26 13:25:26 2015" VIVADOVERSION="2014.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="MIPS_CPU_imp" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -9,15 +9,15 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="key" SIGIS="undef" SIGNAME="External_Ports_key">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="button"/>
+        <CONNECTION INSTANCE="KEY2INST_0" PORT="button"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" NAME="led" SIGIS="undef" SIGNAME="SHOW_ON_LED_0_led">
       <CONNECTIONS>
         <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="led"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="key" SIGIS="undef" SIGNAME="External_Ports_key">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="KEY2INST_0" PORT="button"/>
-        <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="button"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -201,14 +201,14 @@
             <CONNECTION INSTANCE="REGFILE_0" PORT="we"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reg_qa" SIGIS="undef" SIGNAME="REGFILE_0_qb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="REGFILE_0" PORT="qb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="reg_qb" SIGIS="undef" SIGNAME="REGFILE_0_qa">
+        <PORT DIR="I" NAME="reg_qa" SIGIS="undef" SIGNAME="REGFILE_0_qa">
           <CONNECTIONS>
             <CONNECTION INSTANCE="REGFILE_0" PORT="qa"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reg_qb" SIGIS="undef" SIGNAME="REGFILE_0_qb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="REGFILE_0" PORT="qb"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="reg_wn" SIGIS="undef" SIGNAME="DATAPATH_0_reg_wn">
@@ -471,12 +471,12 @@
         </PORT>
         <PORT DIR="O" NAME="qa" SIGIS="undef" SIGNAME="REGFILE_0_qa">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DATAPATH_0" PORT="reg_qb"/>
+            <CONNECTION INSTANCE="DATAPATH_0" PORT="reg_qa"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="qb" SIGIS="undef" SIGNAME="REGFILE_0_qb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DATAPATH_0" PORT="reg_qa"/>
+            <CONNECTION INSTANCE="DATAPATH_0" PORT="reg_qb"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -993,9 +993,9 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="DATAPATH_0" PORT="clk"/>
             <CONNECTION INSTANCE="REGFILE_0" PORT="clk"/>
-            <CONNECTION INSTANCE="KEY2INST_0" PORT="clk"/>
             <CONNECTION INSTANCE="DATA_MEM_0" PORT="clk"/>
             <CONNECTION INSTANCE="SHOW_ON_LED_0" PORT="clk"/>
+            <CONNECTION INSTANCE="KEY2INST_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" SIGIS="rst"/>

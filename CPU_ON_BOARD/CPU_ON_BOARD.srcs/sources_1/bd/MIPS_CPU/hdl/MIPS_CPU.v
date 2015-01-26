@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.2 (win64) Build 928826 Thu Jun  5 18:21:07 MDT 2014
-//Date        : Wed Jan 21 13:38:15 2015
+//Date        : Mon Jan 26 13:25:28 2015
 //Host        : Dtysky running 64-bit major release  (build 9200)
 //Command     : generate_target MIPS_CPU.bd
 //Design      : MIPS_CPU
@@ -107,8 +107,8 @@ MIPS_CPU_DATAPATH_0_0 DATAPATH_0
         .inst_a(DATAPATH_0_inst_a),
         .inst_do(KEY2INST_0_inst_do),
         .reg_d(DATAPATH_0_reg_d),
-        .reg_qa(REGFILE_0_qb),
-        .reg_qb(REGFILE_0_qa),
+        .reg_qa(REGFILE_0_qa),
+        .reg_qb(REGFILE_0_qb),
         .reg_rna(DATAPATH_0_reg_rna),
         .reg_rnb(DATAPATH_0_reg_rnb),
         .reg_we(DATAPATH_0_reg_we),

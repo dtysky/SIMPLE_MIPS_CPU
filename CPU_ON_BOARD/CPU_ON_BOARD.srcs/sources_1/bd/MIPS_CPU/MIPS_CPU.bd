@@ -28,9 +28,9 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>led</spirit:name>
+          <spirit:name>key</spirit:name>
           <spirit:wire>
-            <spirit:direction>out</spirit:direction>
+            <spirit:direction>in</spirit:direction>
             <spirit:vector>
               <spirit:left>15</spirit:left>
               <spirit:right>0</spirit:right>
@@ -38,9 +38,9 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>key</spirit:name>
+          <spirit:name>led</spirit:name>
           <spirit:wire>
-            <spirit:direction>in</spirit:direction>
+            <spirit:direction>out</spirit:direction>
             <spirit:vector>
               <spirit:left>15</spirit:left>
               <spirit:right>0</spirit:right>
@@ -86,13 +86,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>KEY2INST_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="KEY2INST" spirit:vendor="dtysky" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_KEY2INST_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>REGFILE_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="REGFILE" spirit:vendor="dtysky" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -113,6 +106,13 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_SHOW_ON_LED_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>KEY2INST_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="KEY2INST" spirit:vendor="dtysky" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">MIPS_CPU_KEY2INST_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -125,15 +125,15 @@
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
         <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="KEY2INST_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="DATA_MEM_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="SHOW_ON_LED_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="KEY2INST_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>button_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="key"/>
-        <spirit:internalPortReference spirit:componentRef="KEY2INST_0" spirit:portRef="button"/>
         <spirit:internalPortReference spirit:componentRef="SHOW_ON_LED_0" spirit:portRef="button"/>
+        <spirit:internalPortReference spirit:componentRef="KEY2INST_0" spirit:portRef="button"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>DATAPATH_0_con_op</spirit:name>
@@ -278,16 +278,6 @@
         <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="d"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>REGFILE_0_qa</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="qa"/>
-        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="reg_qb"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>REGFILE_0_qb</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="qb"/>
-        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="reg_qa"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>KEY2INST_0_clrn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="KEY2INST_0" spirit:portRef="clrn"/>
         <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="clrn"/>
@@ -302,6 +292,16 @@
         <spirit:name>SHOW_ON_LED_0_led</spirit:name>
         <spirit:internalPortReference spirit:componentRef="SHOW_ON_LED_0" spirit:portRef="led"/>
         <spirit:externalPortReference spirit:portRef="led"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>REGFILE_0_qb</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="qb"/>
+        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="reg_qb"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>REGFILE_0_qa</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="REGFILE_0" spirit:portRef="qa"/>
+        <spirit:internalPortReference spirit:componentRef="DATAPATH_0" spirit:portRef="reg_qa"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>
