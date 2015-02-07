@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2014.2 (64-bit)              -->
+<!-- Product Version: Vivado v2014.4 (64-bit)              -->
 <!--                                                         -->
-<!-- Copyright (c) 2001-2013 Xilinx Inc, All rights reserved -->
+<!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="1" Path="D:/Spira_Heaven/0-MyWorks/MIPS_CPU/CPU_ON_BOARD/CPU_ON_BOARD.xpr">
+<Project Version="7" Minor="2" Path="B:/Complex_Mind/MIPS_CPU/CPU_ON_BOARD/CPU_ON_BOARD.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="748d7a816b784c36b5d92b091ad5e7f1"/>
@@ -12,6 +12,9 @@
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/."/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../spira_heaven/0-myworks/mips_cpu/cpu_on_board/ipcore/show_on_led/show_on_led.srcs/sources_1/new"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../spira_heaven/0-myworks/mips_cpu/cpu_on_board/ipcore/key2inst/key2inst.srcs"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
@@ -22,15 +25,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="hdl/MIPS_CPU.v"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_SHOW_ON_LED_0_0/MIPS_CPU_SHOW_ON_LED_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_clk_wiz_0_0/MIPS_CPU_clk_wiz_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_KEY2INST_0_0/MIPS_CPU_KEY2INST_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_DATAPATH_0_0/MIPS_CPU_DATAPATH_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_ALU32_0_0/MIPS_CPU_ALU32_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_REGFILE_0_0/MIPS_CPU_REGFILE_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_DATA_MEM_0_0/MIPS_CPU_DATA_MEM_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="MIPS_CPU.bd" FileRelPathName="ip/MIPS_CPU_CONTROL_UNIT_0_0/MIPS_CPU_CONTROL_UNIT_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/MIPS_CPU/hdl/MIPS_CPU_wrapper.v">
         <FileInfo>
@@ -45,9 +39,6 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="MIPS_CPU_wrapper"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
-        <Option Name="IPRepoPath" Val="$PPRDIR/."/>
-        <Option Name="IPRepoPath" Val="$PPRDIR/../../../../spira_heaven/0-myworks/mips_cpu/cpu_on_board/ipcore/show_on_led/show_on_led.srcs/sources_1/new"/>
-        <Option Name="IPRepoPath" Val="$PPRDIR/../../../../spira_heaven/0-myworks/mips_cpu/cpu_on_board/ipcore/key2inst/key2inst.srcs"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -74,6 +65,21 @@
       </Config>
     </FileSet>
   </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="QuestaSim/ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+  </Simulators>
   <Runs Version="1" Minor="9">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
       <Strategy Version="1" Minor="2">

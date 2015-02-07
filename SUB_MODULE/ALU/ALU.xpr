@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2014.2 (64-bit)              -->
+<!-- Product Version: Vivado v2014.4 (64-bit)              -->
 <!--                                                         -->
-<!-- Copyright (c) 2001-2013 Xilinx Inc, All rights reserved -->
+<!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="1" Path="D:/Spira_Heaven/0-MyWorks/MIPS_CPU/ALU/ALU.xpr">
+<Project Version="7" Minor="2" Path="B:/Complex_Mind/MIPS_CPU/SUB_MODULE/ALU/ALU.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="d25af9a8f7c24ad08584cd21bc9a183b"/>
@@ -12,6 +12,7 @@
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PSRCDIR"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
@@ -51,7 +52,6 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="ALU32"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
-        <Option Name="IPRepoPath" Val="$PSRCDIR"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -78,6 +78,21 @@
       </Config>
     </FileSet>
   </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="QuestaSim/ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+  </Simulators>
   <Runs Version="1" Minor="9">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
       <Strategy Version="1" Minor="2">
