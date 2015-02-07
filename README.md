@@ -52,7 +52,7 @@ Sub modules(SUB_MODULE):
 
 ProjectTcl(ProjectTcl):
 -----------
-**Tcl projects, you can source run_on_board.tcl or simulation.tcl in "ProjectTcl/src/Tcl" to build a new project, then all will be done.** 
+**Tcl projects, you can source run_on_board.tcl or simulation.tcl in "ProjectTcl/Tcl" to build a new project, then all will be done.** 
 
 CPU for simulation(CPU_FOR_SIM):
 -----------
