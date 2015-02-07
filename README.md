@@ -5,7 +5,8 @@
 ***  
 
 **CPU for simulation----100%.**   
-**CPU on board.----100%.**  
+**CPU on board----100%.**  
+**ProjectTcl.----100%.**
 
 **ALU----100%.**  
 **REGFILE----100%.**  
@@ -47,7 +48,11 @@ Sub modules(SUB_MODULE):
 2. KEY2INST_TB.sv: TestBench for KEY2INST.  
 
 **SHOW_ON_LED（SHOW_ON_LED\SHOW_ON_LED.srcs）:**  
-1. SHOW_ON_LED.v: Show result or keys' state on leds.    
+1. SHOW_ON_LED.v: Show result or keys' state on leds.   
+
+ProjectTcl(ProjectTcl):
+-----------
+**Tcl projects, you can source run_on_board.tcl or simulation.tcl in "ProjectTcl/src/Tcl" to build a new project, then all will be done.** 
 
 CPU for simulation(CPU_FOR_SIM):
 -----------
