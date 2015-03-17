@@ -95,7 +95,8 @@ An exmple:
 
 AUTHOR
 ---
-Dai Tianyu(dtysky)   
+**Dai Tianyu(dtysky)**   
+[http://dtysky.github.io](http://dtysky.github.io)  
 [dtysky@outlook.com](dtysky@outlook.com)  
 [http://github.com/dtysky](http://github.com/dtysky)
 
